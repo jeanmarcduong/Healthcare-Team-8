@@ -4,6 +4,7 @@ import './App.css';
 import Navigation from './components/Navigation';
 import Information from './components/Information';
 import Example from './components/Example';
+import FileCabinet from './components/FileCabinet';
 var crypto = require('crypto');
 
 //password to this was called mypassword
@@ -23,7 +24,12 @@ function App() {
     <div>
       <Router>
         <Navigation />
-        <Example />
+        <Switch>
+          <Route path="/" exact component={() => <Home />} />
+          <Route path="/information" exact component={() => <Information />} />
+          <Route path="/example" exact component={() => <Example />} />
+          <Route path="/files" exact component={() => <FileCabinet />} />
+        </Switch>
       </Router>
     </div>
   );

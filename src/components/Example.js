@@ -14,6 +14,7 @@ const Example = () => {
               id="input"
               name="firstname"
               value="Hello World"
+              readOnly
             />
 
             <label htmlFor="password">Password</label>
@@ -22,6 +23,7 @@ const Example = () => {
               id="password"
               name="lastname"
               value="O7oGkXbdHpWeUwSB"
+              readOnly
             />
           </form>
         </div>
