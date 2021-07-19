@@ -1,5 +1,8 @@
+import React from 'react';
+import FileCSS from './FileCabinet.module.css';
+
 const FileCabinet = () => {
-  return <div></div>;
+  return <React.Fragment></React.Fragment>;
 };
 
 export default FileCabinet;

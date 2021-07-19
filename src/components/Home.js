@@ -1,18 +1,30 @@
-var crypto = require('crypto');
-
-var mykey = crypto.createCipher('aes-128-cbc', 'mypassword');
-console.log('This is the key: ' + mykey);
-var mystr = mykey.update('abc', 'utf8', 'hex');
-console.log('This is the string: ' + mystr);
-mystr += mykey.final('hex');
-
-console.log(mystr); //34feb914c099df25794bf9ccb85bea72
-
+import React from 'react';
+import HomeCSS from './Home.module.css';
+// import chain from '/Digital-Chain.jpg';
 const Home = () => {
   return (
-    <div className="home">
-      <h1>Welcome to the web application</h1>
-    </div>
+    <React.Fragment>
+      <br />
+      <div className="home">
+        <div className="container">
+          <div className="row align-items-center my-5">
+            <div className="col-lg-7">
+              <img
+                className="img-fluid rounded mb-4 mb-lg-0"
+                src={'./Digital-Chain.jpg'}
+                alt=""
+              />
+            </div>
+            <div className="col-lg-5">
+              <h1 className="font-weight-light">Home</h1>
+              <p className={HomeCSS.welcome}>
+                Welcome to the MediChain App, User.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 
